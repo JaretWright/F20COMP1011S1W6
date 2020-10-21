@@ -17,8 +17,8 @@ public class SetsVsLists {
         linkedList.add(student3);
 
         List<String> words = Arrays.asList("hello","goodbye","test");
-        System.out.println(words);
+        System.out.println(class1);
         Collections.sort(class1);
-        System.out.println(words);
+        System.out.println(class1);
     }
 }

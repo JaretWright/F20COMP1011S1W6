@@ -43,4 +43,10 @@ public class Student implements Comparable<Student>{
             return -1;
         return 0;  //they have the same student number
     }
+
+    public String toString()
+    {
+        return String.format("%d %s %s", studentNum, firstName,
+                        lastName);
+    }
 }
