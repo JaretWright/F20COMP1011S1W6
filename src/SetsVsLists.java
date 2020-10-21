@@ -44,6 +44,7 @@ public class SetsVsLists {
         System.out.println(words);
 
         //What's with Sets ... aren't they the same as a list?
+        //Set's do NOT allow duplicates
         HashSet<Student> class2 = new HashSet();
         class2.add(student1);
         class2.add(student2);
@@ -52,12 +53,33 @@ public class SetsVsLists {
         System.out.println("HashSet: "+class2);
 
         HashSet<String> hashSet = new HashSet<>();
-        hashSet.addAll(words);
+        hashSet.addAll(arrayList);
         System.out.println("HashSet of String objects: "+hashSet);
         hashSet.add("test");
+        hashSet.add("Alpha");
         System.out.println("HashSet of String objects: "+hashSet);
-        words.add("test");
-        System.out.println("ArrayList of String objects: "+words);
+        arrayList.add("test");
+        System.out.println("ArrayList of String objects: "+arrayList);
+
+        TreeSet<String> treeSet = new TreeSet<>();
+        treeSet.addAll(arrayList);
+        System.out.println("TreeSet: "+treeSet);
+
+        //Map object has a key and value pair.  Similar to a "Dictionary"
+        HashMap<String, String> phoneNumbers = new HashMap<>();
+        phoneNumbers.put("Jaret", "705-555-1234");
+        phoneNumbers.put("Fred", "777-123-1234");
+
+        HashMap<String, ArrayList<String>> makeAndModels = new HashMap<>();
+        makeAndModels.put("Honda", new ArrayList<>());
+        makeAndModels.get("Honda").add("Accord");
+        makeAndModels.get("Honda").add("Civic");
+        makeAndModels.get("Honda").add("Ridgeline");
+        makeAndModels.get("Honda").add("CRV");
+        makeAndModels.put("Ford", new ArrayList<>());
+        makeAndModels.get("Ford").add("F150");
+        makeAndModels.get("Ford").add("F250");
+        makeAndModels.get("Ford").add("Focus");
 
 
     }
